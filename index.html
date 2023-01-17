@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+            <div class="title">
+                <img src='./assets/title.png' alt="title" />
+            </div>
+            <div class="score">
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </section>
+        <!-- Rock, Paper and Scissors hand-->
+        <section class="hands">
+            <div class="hand paper">
+                <img src="./assets/Paper.png" alt="Paper" onclick="pickUserHand('paper')"/>
+            </div>
+            <div class="hand scissors">
+                <img src="./assets/Scissors.png" alt="scissors" onclick="pickUserHand('scissors')"/>
+            </div>
+            <div class="hand rock">
+                <img src="./assets/Rock.png" alt="rock" onclick="pickUserHand('rock')"/>                        
+            </div>
+        </section>
+        <!-- PlayGround -->
+        <section class="contest">
+            <div class="playerChoice">
+                <h1 class="mob-hide">YOU PICKED</h1>
+                <div class="choiceDiv">
+                    <img id="playerChoiceImg" src="./assets/Paper.png" alt="Paper">
+                </div>
+                <h1 class="desk-hide">YOU PICKED</h1>
+            </div>
+            <div class="referee">
+                <div class="result">
+                    <h1> You Win! </h1>
+                </div>
+                <div class="newGame" onclick="restartGame()" >PLAY AGAIN</div>
+            </div>
+            <div class="computerChoice">
+                <h1 class="mob-hide"> THE HOUSE PICKED</h1>
+                <div class="choiceDiv">
+                    <img id="computerChoiceImg" src="./assets/Paper.png" alt="Paper">
+                </div>
+                <h1 class="desk-hide"> THE HOUSE PICKED</h1>
+            </div>
+            <div class="referee mobile-ref">
+                <div class="result">
+                    <h1> You Win! </h1>
+                </div>
+                <div class="newGame" onclick="restartGame()" >PLAY AGAIN</div>
+            </div>
+        </section>
+        <section id="popup" class="rules-div">
+            <div class="rules">
+                <div class="rules-close close">
+                    <img id="close" src="./assets/icon-close.svg" alt="icon-close">
+                </div>
+                <div class="rules-img-sec">
+                    <img class="rules-img" src="./assets/image-rules.svg" alt="image-rules">
+                </div>
+                <div class="rules-close-center">
+                    <img id="close-mobile" src="./assets/icon-close.svg" alt="icon-close">
+                </div>
+            </div>
+        </section>
+        <section class="btn">
+            <button id="popupBtn">RULES</button>
+        </section>
+    </main>
+</body>
+    <script src="script.js"></script>
+</html>

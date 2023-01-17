@@ -1,0 +1,471 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root{
+    --ScissorsGradient: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+    --ScissorsGradientShadow: hsl(39, 89%, 41%); 
+    --PaperGradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+    --PaperGradientShadow: hsl(230, 69%, 43%);
+    --RockGradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+    --RockGradientShadow: hsl(349, 74%, 41%);
+    --LizardGradient: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+    --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+    --white: #fff;
+
+/* Neutral */
+    --DarkText: hsl(229, 25%, 31%);
+    --ScoreText: hsl(229, 64%, 46%);
+    --HeaderOutline: hsl(217, 16%, 45%);
+    --HeaderOutlineShadow: hsl(0, 0%, 76%);
+
+/* Background */
+    --Dark: hsl(214, 42%, 21%);
+    --RadialGradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+    --shadow : hsl(240, 38%, 10%);
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+img {
+    display: block;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(var(--RadialGradient));
+}
+
+/* title */
+.scoreboard .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* SCORE BOARD --starts */
+.scoreboard{
+    width: 700px;
+    height: 130px;
+    border-radius: 15px;
+    border: 3px solid var(--HeaderOutline);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px 20px 10px 20px;
+}
+
+.score {
+    width: 150px;
+    height: 100px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score h1 {
+    font-size: 56px;
+    color: var(--DarkText);
+    font-family: "Barlow", sans-serif;
+}
+
+.score p {
+    color: var(--ScoreText);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+}
+/* SCORE BOARD --ends */
+
+/* Hands --starts */
+.hands {
+    background-image: url("./assets/triangle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    width: 480px;
+    height: 430px;
+    display: flex;
+    z-index: 0;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hands img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.hands .paper {
+    margin-right: 20px;
+}
+
+.hands .scissors {
+    margin-left: 20px;
+}
+
+.hands .hand{
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.hands .hand:hover {
+    transform: translate3d(0px, -8px, 0px);
+}
+/* Hands --ends */
+
+/* Contest */
+.contest {
+    display: none;
+    margin-top: 30px;
+    width: 900px;
+}
+
+.contest img {
+    width: 265px;
+    height: 265px;
+}
+
+.contest > div {
+    flex: 1;
+}
+
+.contest h1 {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contest .newGame{
+    color: var(--Dark);
+    background-color: var(--white);
+    padding: 12px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.contest .desk-hide {
+    display: none;
+}
+
+.newGame:hover {
+    background-color: var(--white);
+    transform: translate3d(0px, -2px, 0px);
+}
+
+.contest .choiceDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.referee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-ref{
+    display: none;
+}
+.referee h1 {
+    font-size: 45px;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.computerChoice{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button */
+.btn {
+    display: flex;
+    width: 100%;
+    padding: 15px 50px;
+    justify-content: flex-end;
+}
+
+.btn button {
+    color: var(--white);
+    background-color: var(--RadialGradient); 
+    padding: 10px 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.15s;
+    border: 2px solid var(--white);
+    font-weight: 500;
+}
+
+.btn button:hover {
+    background-color: var(--white);
+    color: var(--RadialGradient); 
+    cursor: pointer;
+}
+
+/* pop up */
+.rules-div{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(211, 92%, 5%, 0.449);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0; 
+    padding-top: 150px;
+}
+.rules {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.rules-close {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    width: 100%;
+}
+
+.rules-close img,
+.rules-close-center img
+{
+    width: 25px;
+}
+.rules-close img:hover,
+.rules-close-center img:hover
+{
+    cursor: pointer;
+}
+
+.rules .rules-img-sec {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rules .rules-img{
+    width: 100%;
+}
+
+#close-mobile {
+    display: none;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .contest {
+        display: none;
+        margin-top: 30px;
+        width: 92vw;
+    }
+    
+    .contest img {
+        width: 200px;
+        height: 200px;
+    }
+    .btn {
+        display: flex;
+        width: 100%;
+        padding: 35px 50px;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 720px) {
+    /* Score Board */
+    .scoreboard{
+        width: 85%;
+        height: 130px;
+    }
+}
+@media (max-width: 600px) {
+    .contest {
+        display: none;
+        margin-top: 30px;
+        width: 90vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 40px;
+    }
+    .contest img {
+        width: 180px;
+        height: 180px;
+    }
+    .referee {
+        display: none;
+        padding: 0px 0 40px 0;
+    }
+    .referee h1{
+        margin-bottom: 20px;
+        
+    }
+    .mobile-ref{
+        display: flex;
+    }
+    .btn {
+        display: flex;
+        width: 100%;
+        padding: 15px 50px;
+        justify-content: center;
+    }
+    .contest .newGame{
+        padding: 15px 50px;
+        font-weight: 600;
+    }
+}
+@media (max-width: 500px) {
+    /* Score Board */
+    .scoreboard{
+        width: 85%;
+        height: 100px;
+        padding: 10px;
+    }
+    /* scoreboard img */
+    .title img{
+        height: 80px;
+    }
+    .score {
+        width: 120px;
+        height: 80px;
+        padding-top: 10px;
+    }
+    .score h1 {
+        font-size: 48px;
+    }
+    .score p {
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
+@media (max-width: 420px) {
+    /* Score Board */
+    .scoreboard{
+        width: 90%;
+    }
+    /* hands */
+    .hands {
+        width: 88%;
+        height: 40vh;
+    }
+    
+    .hands img {
+        width: 137px;
+        height: 137px;
+    }
+
+    .hands .paper {
+        margin-right: 25px;
+    }
+    
+    .hands .scissors {
+        margin-left: 25px;
+    }
+    .hands .rock{
+        margin-top: 15px;
+    }
+    .contest .desk-hide {
+        display: block;
+    }
+    .contest .mob-hide {
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .contest {
+        margin-top: 70px;
+    }
+    .contest img {
+        width: 120px;
+        height: 120px;
+    }
+    .contest h1{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .contest .mobile-ref .result h1 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .referee {
+        display: none;        
+    }
+    .mobile-ref{
+        display: flex;
+        margin-top: -50px;
+    }
+    .btn {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    .contest .newGame{
+        padding: 15px 50px;
+        font-weight: 600;
+    }
+
+    /* pop up */
+    .rules-div{ 
+        padding-top: 0;
+        min-height: 90vh;
+    }
+    .rules {
+        border-radius: 0;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .rules .rules-img-sec img {
+        width: 90vw;
+    }
+    .rules-close-center {
+        display: flex;
+        margin-top: 60px;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+    }
+    .close{
+        display: none;
+    }
+    #close-mobile {
+        display: block;
+    }
+
+}
