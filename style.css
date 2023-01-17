@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;700;900&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -81,7 +82,7 @@ main{
 .score h1 {
     font-size: 56px;
     color: var(--DarkText);
-    font-family: "Barlow", sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
 }
 
 .score p {
