@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Barlow Condensed", sans-serif;
 }
 
 /* Colors */
@@ -42,7 +43,7 @@ main{
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: radial-gradient(var(--RadialGradient));
 }
 
@@ -467,6 +468,31 @@ main{
     }
     #close-mobile {
         display: block;
+    }
+    /* changes */
+    @media (max-width: 370px) {
+        .hands{
+            height: 350px;
+            width: 100%;
+            background-image: url("./assets/triangle.png");
+            background-size: 80%;
+            padding: 20px;
+        }
+        .hands img {
+            width: clamp(125px, 34.5vw, 37vw);
+            height: clamp(105px, 16.5vh, 17vh);
+        }
+
+        .hands .paper {
+            margin-right: clamp(18px, 23px, 27px);
+        }
+
+        .hands .scissors {
+            margin-left: 25px;
+        }   
+        .hands .hand:hover {
+            transform: translate3d(0px, -8px, 0px);
+        }
     }
 
 }
