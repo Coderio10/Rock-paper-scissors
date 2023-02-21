@@ -118,9 +118,3 @@ function closePopup() {
     }
 }
 closePopup()
-
-// fuction to open the popup based on time
-function openPopupAuto() {
-    document.getElementById("popup").style.display = "flex"
-}
-window.setTimeout(openPopupAuto, 1000)
