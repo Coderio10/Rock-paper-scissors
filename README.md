@@ -35,8 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://lynix-rock-paper-scissors.netlify.app)
 
 ## My process
 
@@ -109,9 +108,8 @@ Areas i would like to focus on in the future:
 
 ## Author
 
-- Website - [Code Rio](https://www.behance.net/coderio97)
-- Frontend Mentor - [@Coderio10](
-https://www.frontendmentor.io/profile/Coderio10)
+- Frontend Mentor - [@Coderio10](https://www.frontendmentor.io/profile/Coderio10)
 - Twitter - [@coderio97](https://www.twitter.com/coderio97)
+- Behance - [@coderio97](https://www.behance.net/coderio97)
 
 
