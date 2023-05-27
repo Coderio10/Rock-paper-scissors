@@ -109,7 +109,7 @@ Areas i would like to focus on in the future:
 ## Author
 
 - Frontend Mentor - [@Coderio10](https://www.frontendmentor.io/profile/Coderio10)
-- Twitter - [@coderio97](https://www.twitter.com/coderio97)
-- Behance - [@coderio97](https://www.behance.net/coderio97)
+- Twitter - [@anointedkayode](https://www.twitter.com/anointedkayode)
+- Behance - [@anointedkayode](https://www.behance.net/anointedkayode)
 
 
